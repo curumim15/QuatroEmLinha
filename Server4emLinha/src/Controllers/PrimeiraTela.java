@@ -11,5 +11,6 @@ public class PrimeiraTela {
     public void Sair(ActionEvent actionEvent) {
         Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
         stage.close();
+
     }
 }
