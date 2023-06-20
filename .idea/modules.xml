@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Client4emLinha/Client4emLinha.iml" filepath="$PROJECT_DIR$/Client4emLinha/Client4emLinha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ProjetoLDP.iml" filepath="$PROJECT_DIR$/.idea/ProjetoLDP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server4emLinha/Server4emLinha.iml" filepath="$PROJECT_DIR$/Server4emLinha/Server4emLinha.iml" />
+    </modules>
+  </component>
+</project>
