@@ -6,8 +6,14 @@
 
 <AnchorPane prefHeight="600" prefWidth="800" style="-fx-background-color: #51087E;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SegundaTela">
     <children>
-        <Button fx:id="BtnCor" layoutX="310.0" layoutY="250.0" mnemonicParsing="false" onAction="#EscolherCor" prefHeight="79.0" prefWidth="181.0" text="Cor" AnchorPane.bottomAnchor="271.0" AnchorPane.leftAnchor="310.0" AnchorPane.rightAnchor="309.0" AnchorPane.topAnchor="250.0" />
-        <Button fx:id="BtnLigar" layoutX="310.0" layoutY="344.0" mnemonicParsing="false" onAction="#ProximaPagina" prefHeight="79.0" prefWidth="181.0" text="Ligar" />
+        <Button fx:id="BtnCor" layoutX="310.0" layoutY="250.0" mnemonicParsing="false" onAction="#EscolherCor" prefHeight="79.0" prefWidth="181.0" text="Cor" AnchorPane.bottomAnchor="271.0" AnchorPane.leftAnchor="310.0" AnchorPane.rightAnchor="309.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font size="32.0" />
+         </font></Button>
+        <Button fx:id="BtnLigar" layoutX="310.0" layoutY="344.0" mnemonicParsing="false" onAction="#ProximaPagina" prefHeight="79.0" prefWidth="181.0" text="Ligar">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
         <Label fx:id="TextoLabel" layoutX="165.0" layoutY="82.0" prefHeight="105.0" prefWidth="471.0" text="4EMLINHA" AnchorPane.bottomAnchor="377.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="82.0">
             <font>
                 <Font size="96.0" />
