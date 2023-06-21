@@ -11,6 +11,5 @@ public class PrimeiraTela {
         Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
         stage.close();
 
-
     }
 }
