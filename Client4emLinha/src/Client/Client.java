@@ -25,4 +25,9 @@ public class Client {
         serverThread.start();
 
     }
+    public void enviarMensagem(String mensagem) {
+        if (out != null) {
+            out.println(mensagem);
+        }
+    }
 }
