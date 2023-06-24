@@ -17,6 +17,7 @@ public class CorTela {
             Parent root = loader.load();
 
             SegundaTela controller = loader.getController();
+            controller.receberCorSelecionada(corSelecionada);
 
             Stage stage = new Stage();
             stage.setTitle("Server");
