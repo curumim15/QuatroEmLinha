@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controllers.CorTela"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CorTela">
+
+    <Button fx:id="BtnVoltar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Voltar" prefHeight="44.0" prefWidth="81.0" text="Voltar" />
+    <Label layoutX="14.0" layoutY="58.0" prefHeight="90.0" prefWidth="184.0" text="ESCOLHE A &#10;TUA COR">
+        <font>
+            <Font size="32.0" />
+        </font>
+    </Label>
+    <Button fx:id="BtnAmarelo" layoutX="225.0" layoutY="55.0" mnemonicParsing="false" onAction="#EscolherAmarelo" prefHeight="96.0" prefWidth="96.0" style="-fx-background-radius: 100; -fx-background-color: #FFD800;" />
+    <Button fx:id="BtnVermelho" layoutX="342.0" layoutY="55.0" mnemonicParsing="false" onAction="#EscolherVermelho" prefHeight="96.0" prefWidth="96.0" style="-fx-background-radius: 100; -fx-background-color: #FF0000;" />
 
 </AnchorPane>
