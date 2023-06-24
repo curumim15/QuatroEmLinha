@@ -37,4 +37,15 @@ public class Servidor {
             out.println(mensagem);
         }
     }
+    private void receberMensagens() {
+        try {
+            String mensagem;
+            while ((mensagem = in.readLine()) != null) {
+                System.out.println(mensagem);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
