@@ -87,5 +87,6 @@ public class SegundaTela {
     public void receberCorSelecionada(String cor) {
         corSelecionada = cor;
         TextoLabel.setTextFill(Color.web(corSelecionada));
+        btnJogarVisibel();
     }
 }
