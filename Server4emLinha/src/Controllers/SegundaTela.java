@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -15,6 +16,12 @@ public class SegundaTela {
     private String corSelecionada;
     @FXML
     private Label TextoLabel;
+    @FXML
+    private Button BtnLigar;
+    public void initialize(){
+        BtnLigar.setVisible(false);
+
+    }
     public void EscolherCor(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/CorTela.fxml"));
@@ -67,6 +74,13 @@ public class SegundaTela {
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    public void btnJogarVisibel(){
+        if (corSelecionada== null){
+            BtnLigar.setVisible(false);
+        }else {
+            BtnLigar.setVisible(true);
         }
     }
 
