@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controllers.TerceiraTela"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TerceiraTela">
+    <children>
+        <Label fx:id="TextoLabel" layoutX="191.0" layoutY="29.0" prefHeight="171.0" prefWidth="218.0" text="CONECTA-TE &#10;COM O TEU&#10;PARCEIRO" textAlignment="CENTER">
+            <font>
+                <Font size="35.0" />
+            </font>
+        </Label>
+        <Label layoutX="45.0" layoutY="220.0" prefHeight="44.0" prefWidth="106.0" text="Nome">
+            <font>
+                <Font size="31.0" />
+            </font>
+        </Label>
+        <Label layoutX="75.0" layoutY="273.0" text="IP">
+            <font>
+                <Font size="31.0" />
+            </font>
+        </Label>
+        <TextField fx:id="TxtNome" layoutX="181.0" layoutY="227.0" prefHeight="32.0" prefWidth="341.0" />
+        <TextField fx:id="TxtIP" editable="false" layoutX="181.0" layoutY="280.0" prefHeight="32.0" prefWidth="341.0" />
+        <Button fx:id="BtnConectar" layoutX="274.0" layoutY="339.0" mnemonicParsing="false" onAction="#TelaJogo" text="Conectar" />
+        <Button fx:id="BtnVoltar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Voltar" prefHeight="44.0" prefWidth="81.0" text="Voltar" />
+    </children>
 </AnchorPane>
