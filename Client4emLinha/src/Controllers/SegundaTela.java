@@ -44,7 +44,6 @@ public class SegundaTela {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/TerceiraTela.fxml"));
             Parent root = loader.load();
 
-
             TerceiraTela controller = loader.getController();
             controller.receberCorSelecionada(corSelecionada);
 

@@ -29,6 +29,10 @@ public class TerceiraTela {
             e.printStackTrace();
         }
     }
+
+    public void TelaJogo(ActionEvent actionEvent) {
+
+    }
     public void receberCorSelecionada(String cor) {
         corSelecionada = cor;
     }
