@@ -1,5 +1,7 @@
 package Client;
 
+import Controllers.JogoTela;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,6 +12,12 @@ public class Client {
     private Socket socket;
     private PrintWriter out;
     private BufferedReader in;
+
+    private JogoTela jogoTela;
+
+    public Client(JogoTela jogoTela){
+        this.jogoTela = jogoTela;
+    }
 
     public void conectarAoServidor(String ip) {
         Thread serverThread = new Thread(() -> {
