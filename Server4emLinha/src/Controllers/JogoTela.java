@@ -10,4 +10,6 @@ public class JogoTela {
         servidor = new Servidor(this);
         servidor.iniciarServidor();
     }
+    public void receberDadosJogo(String text, String text1, String corSelecionada) {
+    }
 }
