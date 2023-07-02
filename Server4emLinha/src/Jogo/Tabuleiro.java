@@ -39,6 +39,7 @@ public class Tabuleiro {
         }
         return -1;
     }
+
     public boolean checkWin(int lastRow, int lastColumn, Jogador jogador) {
         // Verificação vertical
         int count = 0;
@@ -130,6 +131,17 @@ public class Tabuleiro {
         }
 
         return false; // Não há uma vitória
+    }
+
+    public boolean isFull() {
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < columns; col++) {
+                if (pecas[row][col].isEmpty()) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 }
