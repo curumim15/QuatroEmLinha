@@ -39,5 +39,97 @@ public class Tabuleiro {
         }
         return -1;
     }
+    public boolean checkWin(int lastRow, int lastColumn, Jogador jogador) {
+        // Verificação vertical
+        int count = 0;
+        for (int row = 0; row < rows; row++) {
+            if (pecas[row][lastColumn].getJogador() == jogador) {
+                count++;
+                if (count == 4) {
+                    return true;
+                }
+            } else {
+                count = 0;
+            }
+        }
+
+        // Verificação horizontal
+        count = 0;
+        for (int col = 0; col < columns; col++) {
+            if (pecas[lastRow][col].getJogador() == jogador) {
+                count++;
+                if (count == 4) {
+                    return true;
+                }
+            } else {
+                count = 0;
+            }
+        }
+
+        // Verificação diagonal ascendente (/)
+        count = 0;
+        int row = lastRow;
+        int col = lastColumn;
+        while (row >= 0 && col < columns) {
+            if (pecas[row][col].getJogador() == jogador) {
+                count++;
+                if (count == 4) {
+                    return true;
+                }
+            } else {
+                count = 0;
+            }
+            row--;
+            col++;
+        }
+
+        row = lastRow + 1;
+        col = lastColumn - 1;
+        while (row < rows && col >= 0) {
+            if (pecas[row][col].getJogador() == jogador) {
+                count++;
+                if (count == 4) {
+                    return true;
+                }
+            } else {
+                count = 0;
+            }
+            row++;
+            col--;
+        }
+        // Verificação diagonal descendente (\)
+        count = 0;
+        row = lastRow;
+        col = lastColumn;
+        while (row >= 0 && col >= 0) {
+            if (pecas[row][col].getJogador() == jogador) {
+                count++;
+                if (count == 4) {
+                    return true;
+                }
+            } else {
+                count = 0;
+            }
+            row--;
+            col--;
+        }
+
+        row = lastRow + 1;
+        col = lastColumn + 1;
+        while (row < rows && col < columns) {
+            if (pecas[row][col].getJogador() == jogador) {
+                count++;
+                if (count == 4) {
+                    return true;
+                }
+            } else {
+                count = 0;
+            }
+            row++;
+            col++;
+        }
+
+        return false; // Não há uma vitória
+    }
 
 }
