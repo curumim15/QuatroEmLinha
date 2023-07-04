@@ -1,14 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controllers.JogoTela"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.JogoTela">
+    <children>
+        <Label fx:id="nomeLabel" layoutX="14.0" layoutY="154.0" prefHeight="61.0" prefWidth="122.0" text="Nome" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="ipLabel" layoutX="645.0" layoutY="154.0" prefHeight="61.0" prefWidth="122.0" text="Nome2">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <GridPane fx:id="gridPane" gridLinesVisible="true" layoutX="170.0" layoutY="98.0" prefHeight="381.0" prefWidth="440.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="327.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="327.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="327.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="327.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="327.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="327.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="327.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Circle fx:id="Color1" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-382.0" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Circle fx:id="Color2" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-382.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Circle fx:id="Color3" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-382.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Circle fx:id="Color4" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-382.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Circle fx:id="Color5" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-382.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <Circle fx:id="Color6" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-382.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                <Circle fx:id="Color7" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-382.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="5" />
 
+                <Circle fx:id="Color8" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-320.0" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Circle fx:id="Color9" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-320.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Circle fx:id="Color10" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-320.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Circle fx:id="Color11" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-320.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Circle fx:id="Color12" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-320.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Circle fx:id="Color13" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-320.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                <Circle fx:id="Color14" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-320.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+
+                <Circle fx:id="Color15" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-258.0" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Circle fx:id="Color16" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-258.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Circle fx:id="Color17" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-258.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Circle fx:id="Color18" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-258.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Circle fx:id="Color19" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-258.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Circle fx:id="Color20" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-258.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                <Circle fx:id="Color21" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-258.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+
+                <Circle fx:id="Color22" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-196.0" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Circle fx:id="Color23" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-196.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Circle fx:id="Color24" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-196.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Circle fx:id="Color25" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-196.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Circle fx:id="Color26" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-196.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Circle fx:id="Color27" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-196.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <Circle fx:id="Color28" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-196.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+
+                <Circle fx:id="Color29" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-134.0" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Circle fx:id="Color30" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-134.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Circle fx:id="Color31" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-134.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Circle fx:id="Color32" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-134.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Circle fx:id="Color33" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-134.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Circle fx:id="Color34" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-134.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Circle fx:id="Color35" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-134.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+
+                <Circle fx:id="Color36" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-72.0" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                <Circle fx:id="Color37" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-72.0" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                <Circle fx:id="Color38" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-72.0" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <Circle fx:id="Color39" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-72.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Circle fx:id="Color40" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-72.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Circle fx:id="Color41" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-72.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Circle fx:id="Color42" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-72.0" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            </children>
+        </GridPane>
+        <Circle fx:id="ColorP1" fill="DODGERBLUE" layoutX="67.0" layoutY="324.0" radius="53.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="ColorP2" fill="DODGERBLUE" layoutX="698.0" layoutY="314.0" radius="53.0" stroke="BLACK" strokeType="INSIDE" />
+        <Button fx:id="Coluna1" layoutX="170.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="1" />
+        <Button fx:id="Coluna2" layoutX="232.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="2" />
+        <Button fx:id="Coluna3" layoutX="294.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="3" />
+        <Button fx:id="Coluna4" layoutX="359.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="4" />
+        <Button fx:id="Coluna5" layoutX="421.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="5" />
+        <Button fx:id="Coluna6" layoutX="483.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="6" />
+        <Button fx:id="Coluna7" layoutX="545.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="7" />
+        <Label fx:id="currentPlayerLabel" layoutY="525.0" prefHeight="61.0" prefWidth="212.0" text="player" />
+        <Label fx:id="winnerLabel" layoutX="576.0" layoutY="525.0" prefHeight="61.0" prefWidth="212.0" text="Winner" />
+        <Button fx:id="BtnDesistir" mnemonicParsing="false" onAction="#Desistir" prefHeight="46.0" prefWidth="106.0" text="Desistir" />
+    </children>
 </AnchorPane>

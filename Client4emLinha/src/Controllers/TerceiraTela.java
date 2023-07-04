@@ -7,9 +7,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 public class TerceiraTela {
     @FXML
@@ -18,7 +21,9 @@ public class TerceiraTela {
     private TextField TxtNome;
     @FXML
     private Label TextoLabel;
+
     private String corSelecionada;
+
     public void Voltar(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/SegundaTela.fxml"));
@@ -36,6 +41,7 @@ public class TerceiraTela {
             e.printStackTrace();
         }
     }
+
     public void TelaJogo(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/JogoTela.fxml"));
@@ -43,7 +49,7 @@ public class TerceiraTela {
 
 
             JogoTela controller = loader.getController();
-            controller.receberDadosJogo(TxtNome.getText(), TxtIP.getText(),corSelecionada);
+            controller.receberDadosJogo(TxtNome.getText(), TxtIP.getText(),corSelecionada); // Passar o nome e o endereço IP para a JogoTela
             Stage stage = new Stage();
             stage.setTitle("Cliente Tela");
             stage.setScene(new Scene(root, 800, 600));
@@ -56,7 +62,10 @@ public class TerceiraTela {
             e.printStackTrace();
         }
     }
+
     public void receberCorSelecionada(String cor) {
         corSelecionada = cor;
+        TextoLabel.setTextFill(Color.web(corSelecionada));
     }
+
 }
