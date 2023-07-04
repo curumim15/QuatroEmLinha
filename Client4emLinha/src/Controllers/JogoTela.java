@@ -13,9 +13,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -27,16 +31,14 @@ public class JogoTela {
     @FXML
     private Label nomeLabel; // Referência ao Label para exibir o nome
     @FXML
-    private Label ipLabel; // Referência ao Label para exibir o endereço IP
+    private Label nome2Label,labelEspera,labelColuna;
     @FXML
     private Circle ColorP1,ColorP2;
     @FXML
     private Button Coluna1,Coluna2,Coluna3,Coluna4,Coluna5,Coluna6,Coluna7;
     private Jogador player,player2; // Objeto Player
     @FXML
-    private Label currentPlayerLabel;
-    @FXML
-    private Label winnerLabel;
+    private Rectangle rec1,rec2;
     private boolean win=false;
 
     private Tabuleiro board;
@@ -64,6 +66,7 @@ public class JogoTela {
         Coluna5.setVisible(false);
         Coluna6.setVisible(false);
         Coluna7.setVisible(false);
+        rec2.setStrokeWidth(5);
 
     }
 
@@ -126,8 +129,6 @@ public class JogoTela {
     private void checkForWinner(int row, int column) {
         if (board.checkWin(row, column, currentPlayer)) {
             Platform.runLater(() -> {
-
-                winnerLabel.setText(currentPlayer.getName() + " wins!");
                 openVencedorTela(currentPlayer.getName(), currentPlayer.getColor());
 
             });
@@ -135,7 +136,6 @@ public class JogoTela {
             disableAllButtons();
             win=true;
         } else if (board.isFull()) {
-            Platform.runLater(() -> winnerLabel.setText("It's a draw!"));
             disableAllButtons();
             win=true;
         }
@@ -144,7 +144,13 @@ public class JogoTela {
     private void switchPlayers() {
         if(win==false){
             currentPlayer = (currentPlayer == player) ? player2 : player;
-            Platform.runLater(() ->  currentPlayerLabel.setText(currentPlayer.getName()));
+        }
+        if(currentPlayer==player){
+            rec1.setStrokeWidth(5);
+            rec2.setStrokeWidth(0);
+        }else {
+            rec2.setStrokeWidth(5);
+            rec1.setStrokeWidth(0);
         }
     }
 
@@ -167,8 +173,6 @@ public class JogoTela {
         player.setName(nome);
         player.setColor(cor);
 
-        //player2.setName("Segundo Player");
-        // client.enviarMensagem(player.getName());
         if(player.getColor()== "#FFD800"){
             player2.setColor("#FF0000");
         }else {
@@ -176,27 +180,52 @@ public class JogoTela {
         }
 
         nomeLabel.setText(player.getName());
-
+        nome2Label.setText(player2.getName());
 
         ColorP1.setFill(Color.web(player.getColor()));
         ColorP2.setFill(Color.web(player2.getColor()));
 
-
-        if(currentPlayer==player2){
-            Coluna1.setDisable(true);
-        }
-
         currentPlayer = player2;
-        currentPlayerLabel.setText(currentPlayer.getName());
 
         client = new Client(this);
         client.conectarAoServidor(ip);
+        animaçãoBtnCor();
+
+    }
+    public void animaçãoBtnCor(){
+        CornerRadii cornerRadii = new CornerRadii(100);
+        BackgroundFill BackgroundFill = new BackgroundFill(Color.web(player.getColor()), cornerRadii, null);
+        Background playerBackground = new Background(BackgroundFill);
+        BackgroundFill transparentFill = new BackgroundFill(Color.TRANSPARENT, cornerRadii, null);
+        Background transparentBackground = new Background(transparentFill);
+
+        Coluna1.setOnMouseEntered(event -> Coluna1.setBackground(playerBackground));
+        Coluna1.setOnMouseExited(event -> Coluna1.setBackground(transparentBackground));
+
+
+        Coluna2.setOnMouseEntered(event -> Coluna2.setBackground(playerBackground));
+        Coluna2.setOnMouseExited(event -> Coluna2.setBackground(transparentBackground));
+
+        Coluna3.setOnMouseEntered(event -> Coluna3.setBackground(playerBackground));
+        Coluna3.setOnMouseExited(event -> Coluna3.setBackground(transparentBackground));
+
+        Coluna4.setOnMouseEntered(event -> Coluna4.setBackground(playerBackground));
+        Coluna4.setOnMouseExited(event -> Coluna4.setBackground(transparentBackground));
+
+        Coluna5.setOnMouseEntered(event -> Coluna5.setBackground(playerBackground));
+        Coluna5.setOnMouseExited(event -> Coluna5.setBackground(transparentBackground));
+
+        Coluna6.setOnMouseEntered(event -> Coluna6.setBackground(playerBackground));
+        Coluna6.setOnMouseExited(event -> Coluna6.setBackground(transparentBackground));
+
+        Coluna7.setOnMouseEntered(event -> Coluna7.setBackground(playerBackground));
+        Coluna7.setOnMouseExited(event -> Coluna7.setBackground(transparentBackground));
 
     }
 
     public void segundoPLayer(String nome){
         player2.setName(nome);
-        Platform.runLater(() -> ipLabel.setText(player2.getName()));
+        Platform.runLater(() -> nome2Label.setText(player2.getName()));
     }
 
     public void enviarNomeP(){
@@ -219,7 +248,7 @@ public class JogoTela {
             stage.setScene(new Scene(root));
             stage.show();
 
-            Stage currentStage = (Stage) winnerLabel.getScene().getWindow();
+            Stage currentStage = (Stage) nomeLabel.getScene().getWindow();
             currentStage.close();
 
         } catch (IOException e) {
@@ -240,7 +269,7 @@ public class JogoTela {
             stage.setScene(new Scene(root));
             stage.show();
 
-            Stage currentStage = (Stage) winnerLabel.getScene().getWindow();
+            Stage currentStage = (Stage) nomeLabel.getScene().getWindow();
 
             currentStage.close();
         } catch (IOException e) {
@@ -261,7 +290,7 @@ public class JogoTela {
                 stage.setTitle("Tela do Vencedor");
                 stage.setScene(new Scene(root));
                 stage.show();
-                Stage currentStage = (Stage) winnerLabel.getScene().getWindow();
+                Stage currentStage = (Stage) nomeLabel.getScene().getWindow();
                 currentStage.close();
             });
         } catch (IOException e) {

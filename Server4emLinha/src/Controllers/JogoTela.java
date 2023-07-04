@@ -34,7 +34,7 @@ public class JogoTela {
     @FXML
     private Label nomeLabel; // Referência ao Label para exibir o nome
     @FXML
-    private Label nome2Label,labelEspera,labelColuna; // Referência ao Label para exibir o endereço IP
+    private Label nome2Label,labelEspera,labelColuna;
     @FXML
     private Circle ColorP1,ColorP2;
     @FXML
@@ -169,7 +169,6 @@ public class JogoTela {
         player.setName(nome);
         player.setColor(cor);
 
-        // player2.setName("Segundo Player");
 
         if(player.getColor()== "#FFD800"){
             player2.setColor("#FF0000");

@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.JogoTela">
+<AnchorPane fx:id="AnchorJogo" prefHeight="600" prefWidth="800" style="-fx-background-color: #4b02a7;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.JogoTela">
     <children>
-        <Label fx:id="nomeLabel" layoutX="14.0" layoutY="154.0" prefHeight="61.0" prefWidth="122.0" text="Nome" textAlignment="CENTER">
-            <font>
-                <Font name="System Bold" size="15.0" />
-            </font>
-        </Label>
-        <Label fx:id="ipLabel" layoutX="645.0" layoutY="154.0" prefHeight="61.0" prefWidth="122.0" text="Nome2">
-            <font>
-                <Font name="System Bold" size="15.0" />
-            </font>
-        </Label>
         <GridPane fx:id="gridPane" gridLinesVisible="true" layoutX="170.0" layoutY="98.0" prefHeight="381.0" prefWidth="440.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="327.0" />
@@ -85,17 +76,53 @@
                 <Circle fx:id="Color42" fill="WHITE" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="-72.0" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="0" />
             </children>
         </GridPane>
-        <Circle fx:id="ColorP1" fill="DODGERBLUE" layoutX="67.0" layoutY="324.0" radius="53.0" stroke="BLACK" strokeType="INSIDE" />
-        <Circle fx:id="ColorP2" fill="DODGERBLUE" layoutX="698.0" layoutY="314.0" radius="53.0" stroke="BLACK" strokeType="INSIDE" />
-        <Button fx:id="Coluna1" layoutX="170.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="1" />
-        <Button fx:id="Coluna2" layoutX="232.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="2" />
-        <Button fx:id="Coluna3" layoutX="294.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="3" />
-        <Button fx:id="Coluna4" layoutX="359.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="4" />
-        <Button fx:id="Coluna5" layoutX="421.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="5" />
-        <Button fx:id="Coluna6" layoutX="483.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="6" />
-        <Button fx:id="Coluna7" layoutX="545.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="7" />
-        <Label fx:id="currentPlayerLabel" layoutY="525.0" prefHeight="61.0" prefWidth="212.0" text="player" />
-        <Label fx:id="winnerLabel" layoutX="576.0" layoutY="525.0" prefHeight="61.0" prefWidth="212.0" text="Winner" />
-        <Button fx:id="BtnDesistir" mnemonicParsing="false" onAction="#Desistir" prefHeight="46.0" prefWidth="106.0" text="Desistir" />
+        <Rectangle fx:id="rec1" arcHeight="5.0" arcWidth="5.0" fill="#2f0267" height="264.0" layoutX="14.0" layoutY="224.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="138.0">
+            <effect>
+                <DropShadow height="50.0" radius="24.5" width="50.0" />
+            </effect>
+        </Rectangle>
+        <Rectangle fx:id="rec2" arcHeight="5.0" arcWidth="5.0" fill="#2f0267" height="264.0" layoutX="629.0" layoutY="224.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="138.0">
+            <effect>
+                <DropShadow height="50.0" radius="24.5" width="50.0" />
+            </effect>
+        </Rectangle>
+        <Label fx:id="nome2Label" layoutX="645.0" layoutY="224.0" prefHeight="61.0" prefWidth="122.0" text="Nome2" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="nomeLabel" layoutX="30.0" layoutY="224.0" prefHeight="61.0" prefWidth="122.0" text="Nome" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Circle fx:id="ColorP1" fill="DODGERBLUE" layoutX="83.0" layoutY="356.0" radius="53.0" stroke="BLACK" strokeType="INSIDE">
+            <effect>
+                <DropShadow />
+            </effect></Circle>
+        <Circle fx:id="ColorP2" fill="DODGERBLUE" layoutX="698.0" layoutY="356.0" radius="53.0" stroke="BLACK" strokeType="INSIDE">
+            <effect>
+                <DropShadow height="50.0" radius="24.5" width="50.0" />
+            </effect></Circle>
+        <Button fx:id="Coluna1" layoutX="170.0" layoutY="36.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="62.0" style="-fx-background-color: 00;" textFill="TRANSPARENT" />
+        <Button fx:id="Coluna2" layoutX="232.0" layoutY="36.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="62.0" style="-fx-background-color: 00;" textFill="TRANSPARENT" />
+        <Button fx:id="Coluna3" layoutX="294.0" layoutY="36.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="62.0" style="-fx-background-color: 00;" textFill="TRANSPARENT" />
+        <Button fx:id="Coluna4" layoutX="357.0" layoutY="36.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="62.0" style="-fx-background-color: 00;" textFill="TRANSPARENT" />
+        <Button fx:id="Coluna5" layoutX="420.0" layoutY="36.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="62.0" style="-fx-background-color: 00;" textFill="TRANSPARENT" />
+        <Button fx:id="Coluna6" layoutX="483.0" layoutY="36.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="62.0" style="-fx-background-color: 00;" textFill="TRANSPARENT" />
+        <Button fx:id="Coluna7" layoutX="545.0" layoutY="36.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="62.0" style="-fx-background-color: 00;" textFill="TRANSPARENT" />
+        <Button fx:id="BtnDesistir" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Desistir" prefHeight="46.0" prefWidth="106.0" style="-fx-background-radius: 100; -fx-background-color: #ffffff;" text="Desistir" textFill="#4b02a7">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+            <effect>
+                <DropShadow height="50.0" radius="24.5" width="50.0" />
+            </effect></Button>
+        <BorderPane layoutX="163.0" layoutY="90.0" prefHeight="398.0" prefWidth="456.0" style="-fx-border-color: #4ffaff; -fx-border-width: 10; -fx-border-radius: 10;" />
+        <Label fx:id="LabelColuna" layoutX="189.0" layoutY="52.0" prefHeight="17.0" prefWidth="440.0" text="ESCOLHE A COLUNA QUE QUERES JOGAR!" textFill="WHITE" visible="false">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>
