@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.shape.Circle?>
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.VencedorTela">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #4b02a7;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.VencedorTela">
     <children>
-        <Label fx:id="LabelVencedor" layoutX="112.0" layoutY="100.0" prefHeight="93.0" prefWidth="649.0" text="Vencedor">
+        <Label fx:id="LabelVencedor" layoutX="191.0" layoutY="38.0" prefHeight="93.0" prefWidth="419.0" text="Vencedor" textAlignment="CENTER" textFill="#e773ff">
             <font>
-                <Font size="58.0" />
+                <Font name="System Bold" size="58.0" />
             </font>
         </Label>
-        <Circle  fx:id="CorVencedor" fill="DODGERBLUE" layoutX="400.0" layoutY="328.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-        <Button layoutX="242.0" layoutY="493.0" mnemonicParsing="false" onAction="#Sair" prefHeight="66.0" prefWidth="316.0" text="Inicio" />
+        <Label layoutX="287.0" layoutY="120.0" prefHeight="93.0" prefWidth="227.0" text="VENCEU" textFill="#4ffaff">
+            <font>
+                <Font name="System Bold" size="58.0" />
+            </font>
+        </Label>
+        <Circle fx:id="CorVencedor" fill="DODGERBLUE" layoutX="400.0" layoutY="328.0" radius="100.0" stroke="BLACK" strokeType="INSIDE">
+            <effect>
+                <DropShadow height="50.0" radius="24.5" width="50.0" />
+            </effect></Circle>
+        <Button layoutX="242.0" layoutY="493.0" mnemonicParsing="false" onAction="#Sair" prefHeight="66.0" prefWidth="316.0" style="-fx-background-color: #ffffff; -fx-background-radius: 100;" text="SAIR" textFill="#4b02a7">
+            <effect>
+                <DropShadow height="50.0" radius="24.5" width="50.0" />
+            </effect>
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font></Button>
     </children>
 </AnchorPane>
