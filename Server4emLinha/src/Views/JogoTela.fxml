@@ -119,7 +119,7 @@
                 <DropShadow height="50.0" radius="24.5" width="50.0" />
             </effect></Button>
         <BorderPane layoutX="163.0" layoutY="90.0" prefHeight="398.0" prefWidth="456.0" style="-fx-border-color: #4ffaff; -fx-border-width: 10; -fx-border-radius: 10;" />
-        <Label fx:id="LabelColuna" layoutX="171.0" layoutY="14.0" prefHeight="17.0" prefWidth="440.0" text="ESCOLHE A COLUNA QUE QUERES JOGAR!" textFill="WHITE" visible="false">
+        <Label fx:id="LabelColuna" layoutX="171.0" layoutY="14.0" prefHeight="17.0" prefWidth="440.0" text="ESCOLHE A COLUNA QUE QUERES JOGAR!" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>

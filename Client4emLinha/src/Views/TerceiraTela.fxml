@@ -29,7 +29,7 @@
             <font>
                 <Font name="System Bold" size="18.0" />
             </font></TextField>
-        <TextField fx:id="TxtIP" editable="false" layoutX="245.0" layoutY="325.0" prefHeight="44.0" prefWidth="480.0" style="-fx-background-color: #5801c6; -fx-text-inner-color: #FFFFFF;">
+        <TextField fx:id="TxtIP" layoutX="245.0" layoutY="325.0" prefHeight="44.0" prefWidth="480.0" style="-fx-background-color: #5801c6; -fx-text-inner-color: #FFFFFF;">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font></TextField>
