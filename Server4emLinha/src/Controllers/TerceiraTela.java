@@ -24,12 +24,13 @@ public class TerceiraTela {
 
     private String corSelecionada;
 
+
     public void initialize() {
-        // Buscar e definir o endereço IPv4 no TextField TXTIp
         try {
+            // Obter o endereço IP local do host
             InetAddress localHost = InetAddress.getLocalHost();
             String ipv4 = localHost.getHostAddress();
-            TxtIP.setText(ipv4);
+            TxtIP.setText(ipv4);// Definir o endereço IP na caixa de texto TxtIP
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
@@ -37,15 +38,17 @@ public class TerceiraTela {
 
     public void Voltar(ActionEvent actionEvent) {
         try {
+            // Carregar o arquivo FXML da Segunda Tela
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/SegundaTela.fxml"));
             Parent root = loader.load();
 
+            // Criar um novo Stage para exibir a Segunda Tela
             Stage stage = new Stage();
-            stage.setTitle("Segunda Tela");
-            stage.setScene(new Scene(root, 800, 600));
+            stage.setTitle("Segunda Tela");// Definir o título da janela da Segunda Tela
+            stage.setScene(new Scene(root, 800, 600));// Definir a cena com o conteúdo da Segunda Tela
             stage.show();
 
-            // Fechar a janela atual da tela de seleção de cor
+            // Fechar a janela atual da Terceira Tela
             Stage currentStage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
@@ -55,15 +58,18 @@ public class TerceiraTela {
 
     public void TelaJogo(ActionEvent actionEvent) {
         try {
+            // Carregar o arquivo FXML da JogoTela
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/JogoTela.fxml"));
             Parent root = loader.load();
 
-
+            // Obter o controlador da JogoTela
             JogoTela controller = loader.getController();
-            controller.receberDadosJogo(TxtNome.getText(), TxtIP.getText(),corSelecionada); // Passar o nome e o endereço IP para a JogoTela
+            controller.receberDadosJogo(TxtNome.getText(), TxtIP.getText(),corSelecionada); // Passar o nome, endereço IP e cor selecionada para a JogoTela
+
+            // Criar um novo Stage para exibir a JogoTela
             Stage stage = new Stage();
-            stage.setTitle("Server Tela");
-            stage.setScene(new Scene(root, 800, 600));
+            stage.setTitle("Server Tela"); // Definir o título da janela da JogoTela
+            stage.setScene(new Scene(root, 800, 600));// Definir a cena com o conteúdo da JogoTela
             stage.show();
 
             // Fechar a janela atual da terceira tela
@@ -75,7 +81,7 @@ public class TerceiraTela {
     }
 
     public void receberCorSelecionada(String cor) {
-        corSelecionada = cor;
-        TextoLabel.setTextFill(Color.web(corSelecionada));
+        corSelecionada = cor;//Recebe corSelecionada proveniente da SegundaTela
+        TextoLabel.setTextFill(Color.web(corSelecionada));// Definir a cor do texto da label com base na cor selecionada
     }
 }

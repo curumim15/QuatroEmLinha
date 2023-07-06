@@ -1,5 +1,6 @@
 package Controllers;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,12 +12,14 @@ import java.io.IOException;
 public class PrimeiraTela {
     public void ProximaPagina(ActionEvent actionEvent) {
         try {
+            // Carregar o arquivo FXML da Segunda Tela
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/SegundaTela.fxml"));
             Parent root = loader.load();
 
+            // Criar um novo Stage para exibir a Segunda Tela
             Stage stage = new Stage();
-            stage.setTitle("Server Tela");
-            stage.setScene(new Scene(root, 800, 600));
+            stage.setTitle("Server Tela");// Definir o título da janela da Segunda Tela
+            stage.setScene(new Scene(root, 800, 600));// Definir a cena com o conteúdo da Segunda Tela
             stage.show();
 
             // Fechar a janela atual da primeira tela
@@ -28,8 +31,9 @@ public class PrimeiraTela {
     }
 
     public void Sair(ActionEvent actionEvent) {
+        // Fechar a janela atual (Stage)
         Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
         stage.close();
-
+        Platform.exit();// Fechar a aplicação completamente
     }
 }

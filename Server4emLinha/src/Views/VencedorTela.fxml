@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #4b02a7;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.VencedorTela">
     <children>
-        <Label fx:id="LabelVencedor" layoutX="191.0" layoutY="38.0" prefHeight="93.0" prefWidth="419.0" text="Vencedor" textAlignment="CENTER" textFill="#e773ff">
+        <Label fx:id="LabelVencedor" alignment="CENTER" layoutX="191.0" layoutY="38.0" prefHeight="93.0" prefWidth="419.0" text="Vencedor" textAlignment="CENTER" textFill="#e773ff">
             <font>
                 <Font name="System Bold" size="58.0" />
             </font>

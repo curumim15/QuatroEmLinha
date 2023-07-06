@@ -1,15 +1,25 @@
 package Controllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class CorTela {
     private String corSelecionada;
+
+    @FXML
+    Button BtnAmarelo,BtnVermelho;
+
+    public void initialize(){
+       corSelecionada="#f9d967";
+
+    }
 
     public void Voltar(ActionEvent actionEvent) {
         try {
@@ -34,10 +44,14 @@ public class CorTela {
     }
 
     public void EscolherAmarelo(ActionEvent actionEvent) {
-        corSelecionada = "#FFD800";
+        corSelecionada = "#f9d967";
+        BtnAmarelo.setStyle("-fx-background-radius:100;-fx-background-color: #f9d967;-fx-border-color:White;-fx-border-radius:100;-fx-border-width:5");
+        BtnVermelho.setStyle("-fx-background-radius:100;-fx-background-color: #e773ff;-fx-border-color:White;-fx-border-radius:100;-fx-border-width:0");
     }
 
     public void EscolherVermelho(ActionEvent actionEvent) {
-        corSelecionada = "#FF0000";
+        corSelecionada = "#e773ff";
+        BtnVermelho.setStyle("-fx-background-radius:100;-fx-background-color: #e773ff;-fx-border-color:White;-fx-border-radius:100;-fx-border-width:5");
+        BtnAmarelo.setStyle("-fx-background-radius:100;-fx-background-color: #f9d967;-fx-border-color:White;-fx-border-radius:100;-fx-border-width:0");
     }
 }
