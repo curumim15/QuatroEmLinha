@@ -50,6 +50,7 @@ public class SegundaTela {
 
             // Obter o controlador da Terceira Tela
             TerceiraTela controller = loader.getController();
+            //Envia a corSelecionada para a Terceira Tela
             controller.receberCorSelecionada(corSelecionada);
 
             // Criar um novo Stage para exibir a Terceira Tela
