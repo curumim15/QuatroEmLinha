@@ -16,15 +16,15 @@ Quatro em Linha is a board game for two players. The objective of the game is to
 
 The rules of the game are as follows:
 
-    1.	The game is played on a vertical board with 7 columns and 6 rows. Each column can hold a maximum of 6 pieces.
-    2.	Each player chooses a piece color (usually red or yellow).
-    3.	Players take turns placing a piece of their color in an empty column on the board.
-    4.	The piece falls to the lowest available position in the chosen column.
-    5.	The goal is to be the first player to connect four pieces of the same color in a row (horizontally, vertically, or diagonally) on the board.
-    6.	If all columns are full and no player has connected four pieces in a row, the game ends in a draw.
-    7.	Once a piece is placed in a column, it cannot be moved to another position.
-    8.	When a player connects four pieces in a row, they are declared the winner, and the game ends.
-    9.	Players can challenge each other to play again and may switch the colors of the pieces for a new match.
+> 1.	The game is played on a vertical board with 7 columns and 6 rows. Each column can hold a maximum of 6 pieces.
+> 2.	Each player chooses a piece color (usually red or yellow).
+> 3.	Players take turns placing a piece of their color in an empty column on the board.
+> 4.	The piece falls to the lowest available position in the chosen column.
+> 5.	The goal is to be the first player to connect four pieces of the same color in a row (horizontally, vertically, or diagonally) on the board.
+> 6.	If all columns are full and no player has connected four pieces in a row, the game ends in a draw.
+> 7.	Once a piece is placed in a column, it cannot be moved to another position.
+> 8.	When a player connects four pieces in a row, they are declared the winner, and the game ends.
+> 9.	Players can challenge each other to play again and may switch the colors of the pieces for a new match.
     
 Quatro em Linha is an easy game to learn but can be challenging for players of all ages and skill levels. It requires strategy and critical thinking to be successful.
 
