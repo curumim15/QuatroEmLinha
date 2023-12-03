@@ -6,6 +6,7 @@
 
 **Status:** Done ✔️
 
+Project done in school context, for the class of Programming lab.
 This game was developed using the Java programming language and features an interface based on JavaFX. One of the main objectives was to enable system manipulation by multiple users through a local network.
 
 ##
