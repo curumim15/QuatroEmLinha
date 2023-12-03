@@ -41,7 +41,7 @@ Quatro em Linha is an easy game to learn but can be challenging for players of a
 
 
 
-## **Autores**
+## **Authors**
 
 - [@curumim15](https://github.com/curumim15)
 
